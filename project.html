@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expanding cards</title>
+    <link rel="stylesheet" href="project.css">
+    <link rel="stylesheet" href="project.js">
+</head>
+
+<body>
+
+    <div class="containers">
+        <div class="panel active" style="background-image:url(/picture/pexels-fotios-photos-1088291.jpg);">
+            <h3>Explore the world</h3>
+        </div>
+        <div class="panel" style="background-image: url(/picture/pexels-karla-lopez-211427-678047.jpg);">
+            <h3>Castle view</h3>
+        </div>
+        <div class="panel" style="background-image: url(/picture/pexels-magdalenasukova-1535049.jpg);">
+            <h3>Out side view</h3>
+        </div>
+        <div class="panel" style="background-image: url(/picture/pexels-pixabay-316080.jpg);">
+            <h3>Inside view</h3>
+        </div>
+        <div class="panel" style="background-image: url(/picture/pexels-pixabay-50673.jpg);">
+            <h3>Sunny view</h3>
+        </div>
+        <div class="panel" style="background-image: url(/picture/pexels-victor-lavaud-302543-2431436.jpg);">
+            <h3>Best among the other</h3>
+        </div>
+    </div>
+     <script> 
+        const panels = document.querySelectorAll('.panel')
+
+        panels.forEach((panel) => {
+            panel.addEventListener('click', () => {
+                removeActiveClasses()
+                panel.classList.add('active')
+            })
+        })
+
+        function removeActiveClasses() {
+            panels.forEach(panel => {
+                panel.classList.remove('active')
+            })
+        }
+    </script>
+
+    <script src="project.js"></script>
+</body>
+
+</html>
